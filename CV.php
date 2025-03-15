@@ -31,7 +31,7 @@ if (!move_uploaded_file($_FILES["input_foto"]["tmp_name"], $target_file)) {
     die("<script>alert('Gagal mengunggah gambar!'); window.history.back();</script>");
 }
 
-$foto_path = htmlspecialchars($target_file);
+$foto = htmlspecialchars($target_file);
 $nama = htmlspecialchars($_POST["nama"]);
 $kontak = htmlspecialchars($_POST["kontak"]);
 $sosmed = htmlspecialchars($_POST["sosmed"]);
@@ -118,7 +118,7 @@ $SMA = htmlspecialchars($_POST["SMA"]);
 <body>
     <div class="cv-container">
         <div class="left-side">
-            <img src="<?php echo $foto_path; ?>" alt="Foto Profil">
+            <img src="<?php echo $foto; ?>" alt="Foto Profil">
             <div class="section-title">KONTAK</div>
             <ul class="list">
                 <li>📞 <?php echo $kontak; ?></li>
